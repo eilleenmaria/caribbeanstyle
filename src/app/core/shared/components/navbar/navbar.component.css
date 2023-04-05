@@ -1,0 +1,13 @@
+.navbar-logo{
+  background-image: url('../../../../../assets/image/logo-caribbeanstyle.png');
+  background-size: cover;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.navbar-title-company{
+  color: #1F78BE;
+}

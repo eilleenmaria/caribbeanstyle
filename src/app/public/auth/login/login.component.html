@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<div class="container-card-login">
+  <mat-card class="example-card" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Caribbean Style</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-tab-group dynamicHeight>
+        <mat-tab label="Login">
+          <form class="example-form"
+          [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+          #formDirective="ngForm"
+        >
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input  matInput type="email" formControlName="email" placeholder="pat@example.com" >
+                <mat-error *ngIf="loginForm.controls.email.hasError('required')
+                ">Email es<strong>required</strong></mat-error>
+                <mat-error *ngIf="loginForm.controls.email.hasError('email') && !loginForm.controls.email.hasError('required')">Ingrese un email valido</mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" name="password"  [type]="hide ? 'password' : 'text'" required>
+
+                <mat-error *ngIf="loginForm.value.password">Password must be a combination of lower-case, upper-case, numbers and at least 9 characters long</mat-error>
+                <mat-error *ngIf="loginForm.controls.password.hasError('required')">Password es<strong> required</strong></mat-error>
+
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Confirmar password</mat-label>
+                <input matInput formControlName="confirmPassword" [type]="hide ? 'password' : 'text'" required pattern="{{loginForm.value.password}}">
+
+                <mat-error *ngIf="loginForm.value.confirmPassword">Password no coincide</mat-error>
+                <mat-error *ngIf="loginForm.controls.password.hasError('required')">Password es<strong> required</strong></mat-error>
+
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+
+            <button class="mat-boton" color="primary" mat-raised-button type="submit" >Ingresar</button>
+          </form>
+        </mat-tab>
+
+        <mat-tab label="Register">
+          <form class="example-form example-form-register"
+          [formGroup]="registerForm" (ngSubmit)="submit()"
+          #formDirective="ngForm">
+            <div>
+              <mat-form-field class="example-full-width">
+                <mat-label>Nombre</mat-label>
+                <input  matInput formControlName="name" placeholder="Ingresa tu nombre completo" required pattern="/\s/">
+                <mat-error *ngIf="registerForm.controls.name.hasError('required')
+                ">Nombre es<strong>required</strong></mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Numero identificacion</mat-label>
+                <input  matInput  formControlName="identificacion" placeholder="Ingresa numerode identificacion" required pattern="[0-9]">
+                <mat-error *ngIf="registerForm.value.identificacion">Solo puede contener numeros</mat-error>
+                <mat-error *ngIf="registerForm.controls.phone.hasError('required')
+                ">Numero de identificacion es<strong>required</strong></mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" >
+                <mat-label>Fecha de nacimiento</mat-label>
+                <input matInput formControlName="nacimiento" [matDatepicker]="picker" >
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="registerForm.controls.nacimiento.hasError('required')
+                ">Fecha de nacimiento es<strong>required</strong></mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Adress</mat-label>
+                <input  matInput  formControlName="adress" placeholder="Ingresa direccion de residencia" required pattern="/\s/">
+                <mat-error *ngIf="registerForm.controls.adress.hasError('required')
+                ">Adress es<strong>required</strong></mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Phone number</mat-label>
+                <input  matInput  formControlName="phone" placeholder="Ingresa numero celular" required pattern="'^((\\+91-?)|0)?[0-9]{10}$'">
+                <mat-error *ngIf="registerForm.value.phone">Solo puede contener 10 numeros digitos</mat-error>
+                <mat-error *ngIf="registerForm.controls.phone.hasError('required')
+                ">Phone number es<strong>required</strong></mat-error>
+              </mat-form-field>
+            </div>
+            <button class="mat-boton" color="primary" mat-raised-button type="submit" >Registrar</button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
