@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <g id="Grupo_6832" data-name="Grupo 6832" transform="translate(-643 -3759)">
+    <circle id="Elipse_261" data-name="Elipse 261" cx="40" cy="40" r="40" transform="translate(643 3759)" fill="#e0e3f1"/>
+    <g id="Shopicons_Light_FastDelivery2" transform="translate(659 3775)">
+      <path id="Trazado_5015" data-name="Trazado 5015" d="M0,0H48V48H0Z" fill="none"/>
+      <g id="Shopicon">
+        <path id="Trazado_5016" data-name="Trazado 5016" d="M42,6H18a4.012,4.012,0,0,0-4,4v4A12.035,12.035,0,0,0,2,26V38H6a6,6,0,0,0,12,0h8a6,6,0,0,0,12,0h4a4.012,4.012,0,0,0,4-4V10A4.012,4.012,0,0,0,42,6Zm2,28a2,2,0,0,1-2,2H37.651a5.992,5.992,0,0,0-11.3,0H18a1.966,1.966,0,0,1-.362-.037A6,6,0,0,0,16,33.536V10a2,2,0,0,1,2-2H42a2,2,0,0,1,2,2Zm-8,4a4,4,0,1,1-4-4A4,4,0,0,1,36,38ZM16,38a4,4,0,1,1-4-4A4,4,0,0,1,16,38ZM14,16v9H4.051A10.013,10.013,0,0,1,14,16ZM4,36V27H14v5.349A5.975,5.975,0,0,0,6.349,36Z"/>
+        <rect id="Rectángulo_2502" data-name="Rectángulo 2502" width="12" height="2" transform="translate(23 15)"/>
+        <rect id="Rectángulo_2503" data-name="Rectángulo 2503" width="8" height="2" transform="translate(23 23)"/>
+      </g>
+    </g>
+  </g>
+</svg>

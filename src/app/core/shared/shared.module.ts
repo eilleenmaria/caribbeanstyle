@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 
 import { NavbarComponent } from "./components/navbar/navbar,component";
+import { FooterComponent } from './components/footer/footer.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -14,10 +15,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from "@angular/material/core";
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +38,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatDatepickerModule,
     MatNativeDateModule,
     MatToolbarModule,
+    MatGridListModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+
 
     FormsModule,
     ReactiveFormsModule,
@@ -42,6 +54,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RouterModule,
     CommonModule,
     NavbarComponent,
+    FooterComponent,
 
     MatCardModule,
     MatTabsModule,
@@ -51,7 +64,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatGridListModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule
 
 
   ],

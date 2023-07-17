@@ -1,0 +1,48 @@
+<div class="carrito-main">
+  <app-navbar></app-navbar>
+  <div class="carrito-center">
+    <div class="carrito-container">
+      <div class="carrito-title"><h2>Carrito</h2></div>
+      <div class="carrito-table">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef> Producto </mat-header-cell>
+            <mat-cell *matCellDef="let element"> <img class="a" [src]="element.src" alt=""> {{element.title}} </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.total}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div class="carrito-msj">
+        <p class="carrito-msj_p">Gastos de envio y descuento claculado al momento de pagar</p>
+      </div>
+      <div class="carrito-finalizarcompra">
+        <a class="carrito-finalizarcompra_link" href="">Seguir comprando</a>
+        <button mat-raised-button color="primary">Finalizar pedido</button>
+      </div>
+    </div>
+  </div>
+
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,42 @@
+<div class="products-main">
+  <app-navbar></app-navbar>
+  <div class="product-container">
+    <div class="products-category">
+      <div class="products-category_text">
+        <h2 class="products-category_title">Billeteras</h2>
+      </div>
+    </div>
+    <div class="x">
+      <div class="products-filter">
+      <p>12 de 12 productos</p>
+      <div> <button class="s" mat-stroked-button><svg xmlns="http://www.w3.org/2000/svg" width="20.96" height="20.547" viewBox="0 0 20.96 20.547" style="margin-right: 0.8rem;"><g id="setting-lines" transform="translate(0 -4.503)"><path id="Trazado_8051" data-name="Trazado 8051" d="M4.479,53.82H.616a.616.616,0,1,1,0-1.233H4.479a.616.616,0,1,1,0,1.233Z" transform="translate(0 -45.877)"></path><path id="Trazado_8052" data-name="Trazado 8052" d="M86.96,10.15a2.824,2.824,0,1,1,2.824-2.824A2.827,2.827,0,0,1,86.96,10.15Zm0-4.414A1.591,1.591,0,1,0,88.55,7.327,1.593,1.593,0,0,0,86.96,5.736Z" transform="translate(-80.273)"></path><path id="Trazado_8053" data-name="Trazado 8053" d="M238.835,53.82h-9.214a.616.616,0,0,1,0-1.233h9.214a.616.616,0,0,1,0,1.233Z" transform="translate(-218.492 -45.877)"></path><path id="Trazado_8054" data-name="Trazado 8054" d="M267.253,172.421a2.824,2.824,0,1,1,2.824-2.824A2.827,2.827,0,0,1,267.253,172.421Zm0-4.414a1.591,1.591,0,1,0,1.591,1.591A1.592,1.592,0,0,0,267.253,168.007Z" transform="translate(-252.289 -154.821)"></path><path id="Trazado_8055" data-name="Trazado 8055" d="M10.52,216.083H.616a.616.616,0,1,1,0-1.233h9.9a.616.616,0,1,1,0,1.233Z" transform="translate(0 -200.69)"></path><path id="Trazado_8056" data-name="Trazado 8056" d="M364.376,216.083H361.2a.616.616,0,0,1,0-1.233h3.173a.616.616,0,0,1,0,1.233Z" transform="translate(-344.033 -200.69)"></path><path id="Trazado_8057" data-name="Trazado 8057" d="M71.937,334.684a2.824,2.824,0,1,1,2.824-2.824A2.827,2.827,0,0,1,71.937,334.684Zm0-4.414a1.591,1.591,0,1,0,1.591,1.591A1.592,1.592,0,0,0,71.937,330.27Z" transform="translate(-65.94 -309.635)"></path><path id="Trazado_8058" data-name="Trazado 8058" d="M224.5,378.347h-9.9a.616.616,0,0,1,0-1.233h9.9a.616.616,0,0,1,0,1.233Z" transform="translate(-204.156 -355.505)"></path><path id="Trazado_8059" data-name="Trazado 8059" d="M3.789,378.346H.616a.616.616,0,0,1,0-1.233H3.789a.616.616,0,0,1,0,1.233Z" transform="translate(0 -355.504)"></path></g></svg>Filtrar</button></div>
+      </div>
+    </div>
+  <div class="a">
+      <div class="c">
+          <mat-card *ngFor="let product of products" class="example-card">
+
+            <img  mat-card-image [src]="product.src"  alt="">
+
+            <mat-card-content>
+              <p>
+                {{product.title}}
+              </p>
+              <p>{{product.price}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Ver detalle</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  </div>
+  <app-footer></app-footer>
+</div>

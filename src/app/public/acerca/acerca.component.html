@@ -1,0 +1,42 @@
+<div class="acerca-main">
+  <app-navbar></app-navbar>
+  <div class="acerca-container">
+    <div class="acerca-propisito">
+      <div class="acerca-proposito_column padding-column">
+        <h2 class="acerca-title">Nuestro Proposito</h2>
+        <p class="text-justify">Aligeramos tu paso, potenciando tu curiosidad para que sigas tu propio camino.</p>
+        <p class="text-justify"> Creamos cuidadosamente bolsos ligeros con materiales de calidad que te permiten ir a explorar y descubrir nuevos lugares. Nuestro mantra apoya una visión positiva de la vida. Se trata de ser fiel a ti mismo. Es vivir una vida organizada y más ligera tanto mental como físicamente, donde menos, es más. Se trata de mirar el lado positivo, ver el vaso medio lleno, e irradiar optimismo.</p>
+      </div>
+      <div class="acerca-proposito_column ">
+        <mat-grid-list cols="3" gutterSize="0.7rem" rowHeight="">
+          <mat-grid-tile
+              *ngFor="let item of items"
+              [colspan]="item.cols"
+              [rowspan]="item.rows"
+              ><img class="mat-grid-img" [src]="item.src" [alt]="item.alt">
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+    <div class="acerca-mision">
+      <div class="acerca-mision-text">
+        <h2>Nuestra Misison</h2>
+        <p class="acerca-mision_p">"Traer bolsos, maletas y accesorios cuidadosamente diseñados para ayudarte a vivir live ligth y sacar el máximo provecho de cada día."</p>
+      </div>
+    </div>
+    <div class="acerca-cultura">
+      <div class="acerca-cultura_column">
+        <h2>Nuestra Cultura Empresarial</h2>
+        <p>Fomentamos una cultura en la que todos son bienvenidos. Todo el mundo es libre de ser su verdadero yo y expresar lo que es. Nos comprometemos a construir y mantener un lugar de trabajo que celebre la diversidad de nuestros asociados.</p>
+      </div>
+      <div class="acerca-cultura_column acerca-cultura_image"></div>
+    </div>
+    <div class="acerca-mision acerca-mb">
+      <div class="acerca-mision-text">
+        <h2>Responsabilidad</h2>
+        <p class="acerca-mision_p">"Nos comprometemos a aligerar nuestro paso por el planeta para cuidar mejor de la Tierra, Re imaginando diseños, repensando el material, reutilizando la energía y reconectándose con la gente y el planeta."</p>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

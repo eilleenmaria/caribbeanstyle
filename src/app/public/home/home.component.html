@@ -1,4 +1,5 @@
-<app-navbar></app-navbar>
+<div class="contain-main">
+  <app-navbar></app-navbar>
 <div class="home-container">
   <div class="home-promocional">
     <div class="home-promocional-text">
@@ -7,26 +8,49 @@
       <button mat-raised-button color="primary">Ver Productos</button>
     </div>
   </div>
-  <div class="home-container-productos-destacados">
-    <mat-card class="example-card">
-      <img mat-card-image src="../../../assets/image/manoslibre.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-actions>
-      <button mat-button class="mat-button-text">Manos Libres</button>
-    </mat-card-actions>
-    </mat-card>
+  <div class="home-container_category">
 
-    <mat-card class="example-card">
-      <img mat-card-image src="../../../assets/image/deportivo.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-actions>
-      <button mat-button >Deportivos</button>
-    </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="example-card">
-      <img mat-card-image src="../../../assets/image/billetera.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-actions>
-      <button mat-button >Billeteras</button>
-    </mat-card-actions>
+    <mat-card class="category-card">
+      <mat-card-header class="category-header">
+        <mat-card-title class="categorys-title">Categorias</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-grid-list cols="3" gutterSize="0.7rem" rowHeight="9.5rem">
+          <mat-grid-tile
+              *ngFor="let tile of tiles"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              ><a [href]="tile.href"><img class="mat-grid-img" [src]="tile.src" [alt]="tile.alt">
+                <div class="category-text"><h3>{{tile.title}}</h3><p>{{tile.text}}</p></div>
+              </a>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
     </mat-card>
   </div>
+  <div class="info-ecommerce">
+    <div class="info-ecommerce_contain">
+      <div class="info-column"><div>
+        <img src="../../../assets/image/logo libre crueldad.svg" alt=""></div>
+        <h3 class="info-title">Libre de crueldad animal</h3>
+        <p class="info-text">Todos nuestros bolsos estan fabricados en cuero sintetico de alta calidad.
+      </div>
+      <div class="info-column">
+        <div>
+          <img src="../../../assets/image/logo-envios.svg" alt=""></div>
+          <h3 class="info-title">Envios a toda Colombia</h3>
+          <p class="info-text">Cubrimos mas de 700 municipios a nivel nacional para estar mas cerca de ti.</p>
+      </div>
+      <div class="info-column">
+        <div>
+          <img src="../../../assets/image/logo-pagos.svg" alt=""></div>
+          <h3 class="info-title">Escoge el medio de pago que prefieras</h3>
+          <p class="info-text">Desde pago en efectivo, tarjeta debito, credito, giros. Siempre nos acomodamos a tus posibilidades.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer fxFlexOffset="auto" class="e"></app-footer>
+
 </div>

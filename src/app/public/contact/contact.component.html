@@ -1,0 +1,70 @@
+<div class="contact-main">
+  <app-navbar></app-navbar>
+  <div class="contact-container">
+    <div class="contact-title">
+      <h2>Contacto</h2>
+      <p> No te preocupes. Envía un mensaje utilizando el siguiente formulario de contacto o llámanos.</p>
+    </div>
+    <div class="contact-center">
+      <div class="contact-container_column">
+        <div class="contact-container_column1">
+          <div class="contact-input">
+            <mat-form-field class="contact-input_margin" [style.width.%]=49 appearance="outline">
+              <mat-label>Ingresa nombre</mat-label>
+              <input matInput placeholder="Nombre completo">
+              <mat-hint>Nombre</mat-hint>
+            </mat-form-field>
+            <mat-form-field [style.width.%]=49 appearance="outline">
+              <mat-label>Ingresa tu email</mat-label>
+              <input matInput placeholder="caribbean@example.com">
+              <mat-hint>Email</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="contact-input">
+            <mat-form-field [style.width.%]=100 appearance="outline">
+              <mat-label>Ingrese asunto</mat-label>
+              <input matInput placeholder="Nombre completo">
+              <mat-hint>Asunto</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="contact-input">
+            <mat-form-field [style.width.%]=100 appearance="outline">
+              <mat-label>Ingresa mensaje</mat-label>
+              <textarea matInput placeholder="Nombre completo"></textarea>
+              <mat-hint>Mensaje</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="contact-button">
+            <button [style.width.%]=100 mat-raised-button color="primary">Enviar</button>
+          </div>
+        </div>
+
+        <div class="contact-container_column2">
+          <div class="contact-container-linea">
+            <h3>Contactar el servicio de atención al cliente</h3>
+            <strong>(605)111 11 11</strong>
+            <p>Ext: 1111-1112</p>
+            <p>De lunes a viernes: 8:00 am - 6:00 pm</p>
+            <p>Sabados: 8:00am - 1:00pm</p>
+          </div>
+          <div class="contact-container_redes">
+          <h3>Tambien puedes encontrarnos en </h3>
+          <ul >
+            <li class="contact-social">Facebook</li>
+            <li class="contact-social">Twiter</li>
+            <li class="contact-social">Instagram</li>
+            <li class="contact-social">YouTube</li>
+          </ul>
+        </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

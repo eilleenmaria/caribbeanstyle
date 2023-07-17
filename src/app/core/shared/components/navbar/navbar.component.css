@@ -1,3 +1,7 @@
+.navbar{
+  height: 5rem;
+  width: 100%;
+}
 .navbar-logo{
   background-image: url('../../../../../assets/image/logo-caribbeanstyle.png');
   background-size: cover;
